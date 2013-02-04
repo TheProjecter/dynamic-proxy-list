@@ -37,6 +37,8 @@ public class ProxyListContainer {
 		this.deleteFailureThreshold = threshold;
 		plr = new ProxyListReader(filename);
 
+		mergeLists(this.plr.listProxies());
+		
 		new Timer().schedule(new TimerTask() {
 
 			@Override
